@@ -4,3 +4,6 @@ contents:
 1 use case diagram,
 user and system requirements,
 activity diagram,
+functional and non functional requirements,
+risks,
+design architecture,
