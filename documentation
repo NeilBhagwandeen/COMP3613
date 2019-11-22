@@ -1,1 +1,962 @@
 
+Techne-Logos
+SOFTWARE ENGINEERING II PROJECT 
+COMP 3613
+Project: Study Timetable Planner.
+
+Student 				ID
+Neil Bhagwandeen			816008609
+Ifeaye Murray				816007834
+Kadesha Ambris			816006483
+Nicholas Bain				815008953
+Joshua Stapleton			816010544
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+
+GROUP  INTRODUCTION
+Group Members
+Neil Bhagwandeen	Designer, Programmer.
+Ifeaye Murray		Designer, Programmer.
+Kadesha Ambris	Designer, Programmer.
+Nicholas Bain		Designer, Programmer.
+Joshua Stapleton	Designer, Programmer, Product manager.
+Group Meeting Times
+Our team intends to hold internal meetings on Mondays and Wednesdays 10am - 12pm.
+Collaboration Tools
+In order to complete this project, our group intends to use certain tools which enable long-distance communication and collaboration. Some of these tools are outlined below.
+Skype
+Skype, a popular video chatting application, will be used when group members need to share a visual aspect of the project with his fellow members in real-time. For example, design or functionality changes to the project.
+WhatsApp
+At the most basic level, our group will be communicating and collaborating using popular social media platforms such as WhatsApp. This instant messaging platform help group members to share little tidbits of information in a timely fashion.
+Google Docs
+The Google Docs software will be used by our team for any documentation that needs to be done throughout the project. Google Docs make it simple for the multiple members of our team to contribute to a single text document simultaneously.
+GitHub
+We will use GitHub for each member of the team to be able to contribute to the project without necessarily having to download files to their local machine or having to send files to their fellow members. https://github.com/NeilBhagwandeen/COMP3613
+USER AND SYSTEM REQUIREMENTS
+
+User requirement:
+The system must provide a process for the user to add an exam.
+System requirement:
+1.1)	When the user opens the application, they should be presented with 5 empty text fields corresponding to course code, date, time, location and difficulty, 4 buttons allowing the user to add exam, remove exam, edit exam, and clear text fields  and 42 jTextArea which will make a month’s calendar.
+1.2)	The user should then be able to enter the exam’s details by filling out the required fields and then select the add exam button.
+1.3)	The system should then add the exam into a collection and then display the information in the relevant jTextArea.
+1.4)	The system should then add study days accordingly and display in the relevant jTextArea.
+
+User Requirement:
+The system must provide a process for the user to view study timetable.
+System requirement:
+2.1)	When the user opens the application, they should be presented with 5 empty text fields corresponding to course code, date, time, location and difficulty, 4 buttons allowing the user to add exam, remove exam, edit exam, and clear text fields  and 42 jTextArea which will make a month’s calendar.
+2.3)	Whilst the user is adding, removing and editing exams, the system will show the exam details in the relevant jTextArea corresponding with the day.
+
+User Requirement:
+The system must provide a process for the user to remove an exam from the study timetable.
+System Requirement:
+3.1)	When the user opens the application, they should be presented with 5 empty text fields corresponding to course code, date, time, location and difficulty, 4 buttons allowing the user to add exam, remove exam, edit exam, and clear text fields  and 42 jTextArea which will make a month’s calendar.
+3.2)	The user should then be able to enter the course code and the date of the exam and then be able to select the remove exam button.
+3.3)	The system then checks to see if the date is stored as an exam.
+3.4)	If the date is stored, the exam will be removed from the collection.
+3.5)	The system will then remove the information from the relevant jTextArea.
+
+User Requirement:
+The system must provide a process for the user to edit exam details.
+System Requirement:
+4.1)	When the user opens the application, they should be presented with 5 empty text fields corresponding to course code, date, time, location and difficulty, 4 buttons allowing the user to add exam, remove exam, edit exam, and clear text fields  and 42 jTextArea which will make a month’s calendar.
+4.2)	The user should then be able to enter the course code and the date and the new details of the exam and then be able to select the edit exam button.
+4.3)	The system then checks to see if the date is stored as an exam.
+4.4)	If the date is stored, the exam will be updated in the collection.
+4.5)	The system will then edit the information in the relevant jTextArea.
+
+USER STORIES
+
+Scenario Name: Add New Exam
+Actor instances: Student, timetable generator system
+Flow of Events:
+Student opens application
+Student enters the name of the course,the date, the time of exam, location, level of difficulty from 1 to 10
+ Student selects add when finished
+ System adds courses to existing collection
+ System displays study days for added course in the jTextArea to represent a calendar 
+Student repeats step 2 for remaining exams
+
+Scenario Name: View Timetable
+Actor instances: Student, timetable generator system
+Flow of Events: 
+Student opens application 
+Student adds, removes or edits an exam
+      6)  System displays study days for each course in the jTextArea to represent a calendar 
+
+Scenario Name: Remove an exam
+Actor instances: Student, timetable generator system
+Flow of Events:
+Student enters the course code and date of exam to remove in the relevant text fields
+System highlights requested course once it is available. If it is not an appropriate message will be displayed
+Student selects remove exam button
+System removes the exam from the collection
+System removes study days for removed course in the calendar
+
+
+Scenario Name: Edit an Exam
+Actor instances: Student, timetable generator system
+Flow of Events: 
+Student enters the old course code and any new information in the relevant text fields
+Student selects edit exam button
+System check collection for course code and if present the information will be updated
+System will edit information in the jTextArea
+FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS
+
+
+FUNCTIONAL REQUIREMENTS
+System must have an interface to display the services provided to the user
+System must allow a user to create a timetable
+System must allow a user to add the details of an exam to a timetable
+System must allow a user to edit the details of an exam on a timetable
+System must allow a user to delete an exam from a timetable
+System must allow a user to view a timetable
+System must allow a user to delete a timetable
+
+NON-FUNCTIONAL REQUIREMENTS 
+System must always display the details of an exam correctly in the view
+System should provide a view of a timetable in one step
+System should display a timetable within 1 second after the option is selected
+System should create a timetable in five steps at most
+System should add an exam in two steps at most
+System should delete a timetable in two steps at most
+System must be available 24/7 
+
+SEQUENCE DIAGRAM
+Figure 1: showing edit exam sequence diagram
+
+Figure 2: showing addexam sequence diagram
+Figure 3: view table sequence diagram
+
+Figure 4: remove exam Sequence diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CLASS DIAGRAM
+
+Figure 5:showing class diagram for proposed system
+
+
+
+ACTIVITY DIAGRAM
+
+Figure 6: activity diagram
+
+
+USE CASE DIAGRAM
+
+ 
+Figure 7 : showing use case diagram for proposed system
+
+USE CASES
+
+USE CASE NAME
+Add Exam
+ACTORS
+Student, timetable generator system
+INPUTS
+Course code, Exam date and time, Perceived difficulty
+OUTPUTS
+Exam added to collection, study days displayed in  jTextArea
+FLOW OF EVENTS
+ACTOR
+SYSTEM
+The student enters course code, date, time, location and perceived difficulty
+The student selects add exam button
+
+The system checks the timetable to see if the day has an exam
+If not,the system adds the exam to collection
+System provides an ideal study timetable with new exam inserted from the current date to the last exam date in jTextArea
+
+
+EXCEPTIONS
+Alt-Step 4: If there is an exam on that date, the system adds study days corresponding to the difficulty 
+COMMENTS
+
+
+Table 1: Showing use case for adding an exam
+
+
+
+
+
+
+
+
+
+USE CASE NAME
+Remove Exam
+ACTORS
+Student, timetable generator system
+INPUTS
+Course code and date of exam
+OUTPUTS
+Exam removed from collection and study days removed from jTextArea
+FLOW OF EVENTS
+ACTOR
+SYSTEM
+The student enters the course code and date of exam
+The student selects remove exam button
+
+The system checks the timetable to see if the date has an exam
+If it is, then it is removed from the timetable and the collection
+
+EXCEPTIONS
+Alt-Step 3:  If there is no exam on that day, the system prompts user to check date or course code.
+COMMENTS
+
+
+Table 2: Showing use case for removing an exam
+
+
+
+
+
+
+
+
+
+
+
+
+
+USE CASE NAME
+Edit Exam Details
+ACTORS
+Student, timetable generator system
+INPUTS
+Course code and date
+OUTPUTS
+Exam edited and study days edited
+FLOW OF EVENTS
+ACTOR
+SYSTEM
+The student enters the course code and date of exam
+The student enters any changes to the exam information in relevant text field
+The student selects edit exam button
+
+The system checks the collection timetable to see if the exam is in the timetable
+The system updates any changes that were made to existing information
+The system updates any changes to the jTextArea 
+
+
+
+
+EXCEPTIONS
+Alt-Step 4: If there is no exam on that day, the system prompts user to check date or course code.
+COMMENTS
+
+
+Table 3: Showing use case for editing an exam
+
+
+
+
+
+
+
+
+USE CASE NAME
+View Table
+ACTORS
+Student, timetable generator system
+INPUTS
+
+
+OUTPUTS
+Calendar with exam dates and study days
+FLOW OF EVENTS
+ACTOR
+SYSTEM
+
+
+The system outputs the exam dates and the study dates on a jTextArea in calendar a format
+
+EXCEPTIONS
+
+
+COMMENTS
+Exam days are highlighted a different colour than study days
+Table 4: Showing use case for viewing an exam
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+USE CASE RANKING
+
+Use Case Name
+Ranking Criteria 1-5
+Total
+Priority
+Build Cycle
+
+
+1
+2
+3
+4
+5
+6
+
+
+View Table
+5
+5
+3
+4
+5
+4
+26
+High
+4
+Remove Exam
+5
+5
+3
+3
+5
+3
+24
+High
+5
+Add Exam
+4
+5
+3
+4
+4
+3
+23
+High
+5
+Edit Exam Details
+3
+5
+3
+4
+3
+2
+20
+Medium
+6
+Table Showing Ranking of Use Cases.
+
+1.Significant impact on the architectural design.
+2.Easy to implement but contains significant functionality.
+3.Includes risky, time critical, or complex functions.
+4.Invovles significant research or new or risky technology.
+5.Includes primary business functions
+6.Will increase revenue or decrease costs.
+
+
+1-10 inclusive low
+11-20 inclusive medium
+21-30 inclusive high
+
+DESIGN ARCHITECTURE
+
+Layered Architecture:
+Layered Architecture organizes the system into layers with related functionality associated with each layer. A layer provides services to the layer above it so the lowest-level layers represent core services that are likely to be used throughout the system.
+
+Advantages
+Simplicity: 
+The concept of layered architecture is easy to learn and implement.
+Consistency: 
+The layers along with the overall code organization is consistent across all the layered 
+projects.
+Browsability: 
+All the objects are kept together. So, when you need to change something in some or all 
+the objects of a particular type, it is easier to quickly find an object.
+
+Disadvantages:
+Performance hit:
+	Performance will degrade if there are too many layers. This occurs as service is processed 
+in multiple layers.
+Clean Separation:
+	Providing a clean separation between layers is often difficult. This occurs as it may be difficult to assign a function to certain layers.
+
+RISK MANAGEMENT
+
+RISK
+PROBABILITY
+EFFECTS
+AFFECTS
+STRATEGY CATEGORY
+STRATEGY TO BE EMPLOYED
+The software may crash due to information overload
+High
+Serious
+Product
+Underestimated workload
+Ensure system can handle large amounts of information at once
+The software may not be accepted by targeted population
+Moderate
+Catastrophic
+Project and business
+The software is underwhelming
+Take customer feedback to improve overall system before launching
+A competitive product may be implemented before
+Moderate
+Tolerable
+Business
+Choosing the correct market and audience
+Improve marketing skills and provide what the audience needs
+The database used may not process as many information as expected
+Moderate
+Tolerable
+Product and project
+Database performance
+Investigate in buying a higher performance database that can handle extreme amounts of data
+The scale of the project workload is underestimated
+High
+Tolerable
+Project and product
+Underestimated development
+Investigate buying-in components
+The timetable generated by code is not feasible to implement
+Moderate
+Serious
+Product 
+Patching of software
+Generate code that produces what the user is most comfortable using
+The size of the system may be underestimated
+high
+Tolerable
+Product
+Underestimated size of software
+Manage the components being used in order to maximize the space being used 
+The time required to develop the software may be underestimated
+High
+Serious
+Product and project
+Underestimated development time
+Investigate the use of a program generator or buying-in components
+
+BURNDOWN CHART
+
+
+
+TESTING
+
+Exam Day unit test.
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import java.util.Date;
+/**
+ * The test class ExamDayTest.
+ *
+ * @author  (your name)
+ * @version (a version number or a date)
+ */
+public class ExamDayTest
+{
+    private ExamDay examDay;
+    /**
+     * Default constructor for test class ExamDayTest
+     */
+    public ExamDayTest()
+    {
+        Date d1 = new Date (2019,10,19);
+        examDay = new ExamDay ("C1", d1,"1:00pm","JFK",2 );
+    }
+
+    /**
+     * Sets up the test fixture.
+     *
+     * Called before every test case method.
+     */
+    @Before
+    public void setUp()
+    {
+    }
+
+    /**
+     * Tears down the test fixture.
+     *
+     * Called after every test case method.
+     */
+    @After
+    public void tearDown()
+    {
+    }
+    
+    @Test
+    public void test_get_courseCode(){
+        assertEquals("C1",examDay.get_courseCode());
+    }
+    
+    @Test
+    public void test_get_date(){
+        Date d1 = new Date(2019,10,19);
+        assertEquals(d1,examDay.get_date());
+    }
+    
+    @Test
+    public void test_get_time(){
+        assertEquals("1:00pm",examDay.get_time());
+    }
+    
+    @Test
+    public void test_get_location(){
+        assertEquals("JFK",examDay.get_location());
+    }
+    
+    @Test
+    public void test_get_difficulty(){
+        assertEquals(2,examDay.get_difficulty());
+    }
+    
+    @Test
+    public void test_set_courseCode(){
+        examDay.set_courseCode("COMP1");
+        assertEquals("COMP1",examDay.get_courseCode());
+    }
+    
+    @Test
+    public void test_set_date(){
+        Date d1 = new Date(2019,1,19);
+        examDay.set_date(d1);
+        assertEquals(d1,examDay.get_date());
+    }
+    
+    @Test
+    public void test_set_time(){
+        examDay.set_time("9:00am");
+        assertEquals("9:00am",examDay.get_time());
+    }
+    
+    @Test
+    public void test_set_location(){
+        examDay.set_location("SPEC");
+        assertEquals("SPEC",examDay.get_location());
+    }
+    
+    @Test
+    public void test_set_difficulty(){
+        examDay.set_difficulty(3);
+        assertEquals(3,examDay.get_difficulty());
+    }
+}
+
+Study Day unit test
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import java.util.Date;
+/**
+ * The test class StudyDayTest.
+ *
+ * @author  (your name)
+ * @version (a version number or a date)
+ */
+public class StudyDayTest
+{
+    private StudyDay studyDay;
+    /**
+     * Default constructor for test class StudyDayTest
+     */
+    public StudyDayTest()
+    {
+        Date d1 = new Date (2019,10,19);
+        studyDay = new StudyDay("C1",d1);
+    }
+
+    /**
+     * Sets up the test fixture.
+     *
+     * Called before every test case method.
+     */
+    @Before
+    public void setUp()
+    {
+    }
+
+    /**
+     * Tears down the test fixture.
+     *
+     * Called after every test case method.
+     */
+    @After
+    public void tearDown()
+    {
+    }
+    
+    @Test
+    public void test_get_courseCode(){
+        assertEquals("C1",studyDay.get_courseCode());
+    }
+    
+    @Test
+    public void test_get_date(){
+        Date d1 = new Date(2019,10,19);
+        assertEquals(d1,studyDay.get_date());
+    }
+    
+    @Test
+    public void test_set_courseCode(){
+        studyDay.set_courseCode("COMP1");
+        assertEquals("COMP1",studyDay.get_courseCode());
+    }
+    
+    @Test
+    public void test_set_date(){
+        Date d1 = new Date(2019,10,19);
+        studyDay.set_date(d1);
+        assertEquals(d1,studyDay.get_date());
+    }
+}
+
+Timetable unit test
+import java.text.SimpleDateFormat;
+import java.util.*;
+public class TimeTable {
+    private TreeMap <Date,Day> timeTable;
+    
+    public TimeTable(){
+        timeTable = new TreeMap <>();
+    }
+    
+    public boolean addDay(Day d){
+        timeTable.put(d.get_date(),d);
+        return true;
+    }
+    
+    public boolean deleteDay(Date d){
+        if(timeTable.isEmpty())
+            return false;
+        if(timeTable.get(d)==(null))
+            return false;
+        timeTable.remove(d);
+        return true;
+    }
+    
+    public String printDay(Date d){
+        if(timeTable.isEmpty())
+            return null;
+        if(timeTable.get(d)==(null))
+            return null;
+        Day tday = timeTable.get(d);
+        String str = "";
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY");
+        str =  str + formatter.format(d)+ "\n";
+        str = str + tday.get_courseCode() + "\n";
+        if(tday instanceof TestDay){
+            str = str + tday.get_time() + "\n";
+            str = str + tday.get_location() + "\n";
+            str = str + tday.get_difficulty() + "\n";
+        }
+        return str;  
+    }
+    
+    public boolean editDay(Day d){
+        if(timeTable.isEmpty())
+            return false;
+        if (timeTable.isEmpty())
+            return false;
+        timeTable.get(d.get_date()).set_courseCode(d.get_courseCode());
+        timeTable.get(d.get_date()).set_location(d.get_location());
+        timeTable.get(d.get_date()).set_time(d.get_time());
+        timeTable.get(d.get_date()).set_difficulty(d.get_difficulty());
+        return true;
+    }
+}
+
+CODE
+
+Day class 
+import java.util.*;
+public abstract class Day {
+    protected String courseCode;
+    protected Date date;
+        
+    public Day (String courseCode, Date date){
+        this.date = date;
+        this.courseCode = courseCode;
+    }
+    
+    //public abstract int compareTo (Day d1);    
+    public abstract Date get_date();
+    public abstract String get_courseCode();
+    public abstract String get_time ();
+    public abstract String get_location ();
+    public abstract int get_difficulty ();
+    public abstract void set_courseCode(String courseCode);
+    public abstract void set_date(Date date);
+    public abstract void set_time(String time);
+    public abstract void set_location(String location);
+    public abstract void set_difficulty(int difficulty);
+}
+
+Exam Day class
+import java.util.*;
+public class ExamDay extends Day implements TestDay
+{
+    protected String time;
+    protected String location;
+    protected int difficulty;
+    
+    
+    public ExamDay (String courseCode, Date date, String time, String location, int difficulty){
+        super(courseCode, date);
+        this.time = time;
+        this.location = location;
+        this.difficulty = difficulty;
+    }
+    
+    
+    @Override
+    public String get_courseCode (){
+        return courseCode;
+    }
+    
+    @Override
+    public Date get_date(){
+        return date;
+    }
+    
+    @Override
+    public String get_time (){
+        return time;
+    }
+    
+    @Override
+    public String get_location (){
+        return location;
+    }
+    
+    @Override
+    public int get_difficulty (){
+        return difficulty;
+    }
+    
+    
+    @Override
+    public void set_courseCode(String courseCode){
+        this.courseCode = courseCode;
+    }
+    
+    @Override
+    public void set_date(Date date){
+        this.date = date;
+    }
+    
+    @Override
+    public void set_time(String time){
+        this.time = time;
+    }
+    
+    @Override
+    public void set_location(String location){
+        this.location = location;
+    }
+    
+    @Override
+    public void set_difficulty(int difficulty){
+        this.difficulty = difficulty;
+    }
+}
+
+Study Day class
+import java.util.*;
+public class StudyDay extends Day
+{
+    public StudyDay (String courseCode, Date date){
+        super(courseCode, date);
+    }
+    
+    
+    @Override
+    public String get_courseCode (){
+        return courseCode;
+    }
+    
+    @Override
+    public Date get_date(){
+        return date;
+    }
+    
+    @Override
+    public String get_time (){
+        return null;
+    }
+    
+    @Override
+    public String get_location (){
+        return null;
+    }
+    
+    @Override
+    public int get_difficulty (){
+        return 0;
+    }
+    
+    
+    @Override
+    public void set_courseCode(String courseCode){
+        this.courseCode = courseCode;
+    }
+    
+    @Override
+    public void set_date(Date date){
+        this.date = date;
+    }
+    
+    @Override
+    public void set_time(String time){
+        
+    }
+    
+    @Override
+    public void set_location(String location){
+        
+    }
+    
+    @Override
+    public void set_difficulty(int difficulty){
+        
+    }
+}
+
+Timetable class
+import java.text.SimpleDateFormat;
+import java.util.*;
+public class TimeTable {
+    private TreeMap <Date,Day> timeTable;
+    
+    public TimeTable(){
+        timeTable = new TreeMap <>();
+    }
+    
+    public boolean addStudyDay (Day d){
+        Date tempd = d.get_date();
+        Date trash = new Date();
+        Date currd = new Date(trash.getYear(),trash.getMonth(),trash.getDate());
+        Random randd = new Random();
+	int randomInt = randd.nextInt((tempd.getDate() - currd.getDate()) + 1) + currd.getDate();
+        Date randdate = new Date(tempd.getYear(),tempd.getMonth(),randomInt);
+        //System.out.println(randdate.toString());
+        Day tempSD = new StudyDay(d.get_courseCode(),randdate);
+        boolean checker = false;
+        int numtimes = 0;
+        while (checker == false && numtimes <3){
+            if(timeTable.get(tempSD.get_date()) == null){
+                timeTable.put(tempSD.get_date(),tempSD);
+                checker = true;
+                numtimes++;
+            }
+            else{
+                if(timeTable.get(tempSD.get_date()) instanceof StudyDay){
+                    String str = timeTable.get(tempSD.get_date()).get_courseCode();
+                    str = str + "\n"+ tempSD.get_courseCode();
+                    timeTable.get(tempSD.get_date()).set_courseCode(str);
+                    checker = true;
+                    numtimes++;
+                }
+            }
+            numtimes++;
+        }
+        return true;
+    }
+    
+    public boolean addDay(Day d){
+        timeTable.put(d.get_date(),d);
+        for(int i=1;i<=d.get_difficulty();i++)
+           addStudyDay(d);
+        return true;
+        
+    }
+    
+    public boolean deleteDay(Date d){
+        if(timeTable.isEmpty())
+            return false;
+        if(timeTable.get(d)==(null))
+            return false;
+        timeTable.remove(d);
+        return true;
+    }
+    
+    public boolean editDay(Day d){
+        if(timeTable.isEmpty())
+            return false;
+        if (timeTable.isEmpty())
+            return false;
+        timeTable.get(d.get_date()).set_courseCode(d.get_courseCode());
+        timeTable.get(d.get_date()).set_location(d.get_location());
+        timeTable.get(d.get_date()).set_time(d.get_time());
+        timeTable.get(d.get_date()).set_difficulty(d.get_difficulty());
+        return true;
+    }
+    
+    public String printDay(Date d){
+        if(timeTable.isEmpty())
+            return null;
+        if(timeTable.get(d)==(null))
+            return null;
+        Day tday = timeTable.get(d);
+        String str = "";
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY");
+        str =  str + formatter.format(d)+ "\n";
+        str = str + tday.get_courseCode() + "\n";
+        if(tday instanceof TestDay){
+            str = str + tday.get_time() + "\n";
+            str = str + tday.get_location() + "\n";
+            str = str + tday.get_difficulty() + "\n";
+        }
+        return str;  
+    }
+    
+}
+
+POINTS FOR FUTURE DEVELOPMENT
